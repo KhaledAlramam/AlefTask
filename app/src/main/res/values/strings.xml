@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">AlefTask</string>
+    <string name="dummy_header">Lurem Ipsum</string>
+    <string name="favourite_button">Favourite button</string>
+    <string name="product_image">Product image</string>
+    <string name="home">Home</string>
+    <string name="sort_by">Sort By</string>
+    <string name="search">Search</string>
+    <string name="see_more">See More</string>
+    <string name="save">Save</string>
+    <string name="by_name">By Name</string>
+    <string name="by_price">By Price</string>
+</resources>

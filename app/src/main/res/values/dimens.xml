@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="s_margin">8dp</dimen>
+    <dimen name="m_margin">16dp</dimen>
+    <dimen name="header_text_size">18sp</dimen>
+    <dimen name="x_header_text_size">20sp</dimen>
+    <dimen name="description_text_size">14sp</dimen>
+</resources>

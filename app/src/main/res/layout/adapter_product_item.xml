@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/s_margin"
+        android:background="@drawable/shape_grey_border_32dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/productItemImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintDimensionRatio="h,1:.5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.SelectedCornerRadius"
+            tools:srcCompat="@tools:sample/backgrounds/scenic"
+            android:contentDescription="@string/product_image" />
+
+        <TextView
+            android:id="@+id/productItemTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/m_margin"
+            android:layout_marginTop="@dimen/m_margin"
+            android:layout_marginEnd="@dimen/m_margin"
+            android:textSize="@dimen/header_text_size"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/productItemImage"
+            tools:text="@string/dummy_header" />
+
+        <TextView
+            android:id="@+id/productItemDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/m_margin"
+            android:layout_marginTop="@dimen/s_margin"
+            android:layout_marginEnd="@dimen/m_margin"
+            android:layout_marginBottom="@dimen/m_margin"
+            android:lines="3"
+            android:textSize="@dimen/description_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/productItemTitle"
+            tools:text="TextView" />
+
+        <ImageButton
+            android:id="@+id/favouriteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m_margin"
+            android:layout_marginEnd="@dimen/m_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingStart="@dimen/m_margin"
+            android:paddingEnd="@dimen/m_margin"
+            android:paddingTop="@dimen/s_margin"
+            android:paddingBottom="@dimen/s_margin"
+            android:background="@drawable/shape_favourite_back"
+            app:srcCompat="@drawable/ic_heart"
+            android:contentDescription="@string/favourite_button" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
