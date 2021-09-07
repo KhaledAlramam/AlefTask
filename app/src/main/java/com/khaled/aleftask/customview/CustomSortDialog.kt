@@ -18,11 +18,11 @@ class CustomSortDialog(activity: Activity, private val listener: OnSortChanged):
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.dialog_sort);
-        saveButton = findViewById(R.id.saveSort);
-        byName = findViewById(R.id.sortByName);
-        byPrice = findViewById(R.id.sortByPrice);
+        requestWindowFeature(Window.FEATURE_NO_TITLE)
+        setContentView(R.layout.dialog_sort)
+        saveButton = findViewById(R.id.saveSort)
+        byName = findViewById(R.id.sortByName)
+        byPrice = findViewById(R.id.sortByPrice)
         saveButton.setOnClickListener {
             listener.onClick(byName.isChecked)
             dismiss()

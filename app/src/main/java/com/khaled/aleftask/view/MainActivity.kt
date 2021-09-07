@@ -1,25 +1,22 @@
 package com.khaled.aleftask.view
 
-import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.khaled.aleftask.R
+import com.khaled.aleftask.customview.CustomSortDialog
 import com.khaled.aleftask.data.model.Product
 import com.khaled.aleftask.databinding.ActivityMainBinding
 import com.khaled.aleftask.util.OnSortChanged
 import com.khaled.aleftask.util.Resource
 import dagger.hilt.android.AndroidEntryPoint
-import android.graphics.drawable.ColorDrawable
-import android.view.ViewGroup
-import androidx.core.view.isVisible
-import androidx.recyclerview.widget.RecyclerView
-import com.khaled.aleftask.customview.CustomSortDialog
 
 
 @AndroidEntryPoint
@@ -28,7 +25,7 @@ class MainActivity : AppCompatActivity(), OnSortChanged {
     private lateinit var binding: ActivityMainBinding
     private val viewModel: ProductViewModel by viewModels()
     private val productAdapter = ProductAdapter()
-    var inMemoryProducts: List<Product>? = null
+    private var inMemoryProducts: List<Product>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
