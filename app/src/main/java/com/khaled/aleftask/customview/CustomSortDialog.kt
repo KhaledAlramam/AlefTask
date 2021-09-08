@@ -15,6 +15,7 @@ class CustomSortDialog(activity: Activity, private val listener: OnSortChanged):
     private lateinit var saveButton: Button
     private lateinit var byName: RadioButton
     private lateinit var byPrice: RadioButton
+    private var isSortedByName: Boolean? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,9 +25,18 @@ class CustomSortDialog(activity: Activity, private val listener: OnSortChanged):
         byName = findViewById(R.id.sortByName)
         byPrice = findViewById(R.id.sortByPrice)
         saveButton.setOnClickListener {
+            isSortedByName = byName.isChecked
             listener.onClick(byName.isChecked)
             dismiss()
         }
         window?.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+    }
+
+    override fun show() {
+        super.show()
+        isSortedByName?.let {
+            byName.isChecked = it
+            byPrice.isChecked = !it
+        }
     }
 }

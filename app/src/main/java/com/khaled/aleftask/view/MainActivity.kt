@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity(), OnSortChanged {
     }
 
     private fun initUi() {
+        val customDialog = CustomSortDialog(this@MainActivity, this@MainActivity)
         binding.apply {
             productRv.adapter = productAdapter
             productRv.layoutManager =
@@ -65,7 +66,6 @@ class MainActivity : AppCompatActivity(), OnSortChanged {
                 }
             })
             sortButton.setOnClickListener {
-                val customDialog = CustomSortDialog(this@MainActivity, this@MainActivity)
                 customDialog.show()
             }
             searchEt.addTextChangedListener(object : TextWatcher {
